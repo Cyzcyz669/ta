@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="google" content="notranslate">
+<title>拓</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"></head><body>
+<header><span class="pwrap"><span id="progress" aria-live="polite">已拓 0/47 字</span><small id="progNote"></small></span><span id="sheetLabel"></span><button id="menuBtn" title="打开结尾面板：读一读 / 存成图片 / 再拓一张">读一读 / 存图</button>
+  <button id="roomBtn" aria-pressed="true" title="声音">声音 开</button></header>
+<main id="stage"><canvas id="paper" aria-label="拓纸：在纸上慢慢来回擦来上墨"></canvas>
+  <div id="marks"></div>
+  <div id="intro"><p class="big">轻轻地，拓</p><p id="introLead"></p></div>
+  <div id="explain" role="note"><p id="sheetStatus" role="status" hidden></p><p id="explainMini">纸压在碑面：墨落凸面，刻字留白</p><p id="explainText">纸压在碑面上。墨只落在凸起的石面，字是刻进去的，所以拓出来的字是白的。</p><p id="explainHow">在纸上慢慢擦。</p><button id="explainClose" aria-label="收起说明">收起</button></div>
+  <div id="flash"></div></main>
+<section id="ending" hidden><button class="close" aria-label="关闭">×</button><p class="big" id="endTitle">拓完了。</p><p id="endHint" class="small" hidden>可以先读一读，或把现在拓到的样子存成图片。</p><p id="endText">你拓下的，是一千多年前刻下的字。</p>
+  <div class="btns"><button id="readBtn">读一读</button><button id="saveBtn">存成图片</button><button id="againBtn">再拓一张</button></div></section>
+<p id="derive">拓纸画面是根据原拓图像生成的可视化，非原拓本 · 底图：上海博物馆藏，图源 Wikimedia Commons</p>
+<footer><button id="srcBtn">来源</button><button id="origBtn">原拓</button><button id="prevBtn" aria-label="上一张">‹ 上一张</button><button id="nextBtn" aria-label="下一张">下一张 ›</button><button id="autoBtn" aria-pressed="false" title="不方便拖动时，自动慢慢拓">自动拓</button></footer>
+<section id="card" role="dialog" aria-labelledby="cardChar" hidden><button class="close" aria-label="关闭">×</button><button id="cardBack" hidden>‹ 释文</button>
+  <div class="top"><canvas id="cardImg" width="120" height="120" aria-label="碑上原字"></canvas><div><div id="cardChar" lang="zh-Hant"></div><div id="cardStd"></div><div id="cardPy"></div></div></div>
+  <p id="cardMeaning"></p><p id="cardNote"></p><p id="cardStatus"></p><div class="srcHead">出处</div><ul id="cardSrc"></ul></section>
+<section id="reader" hidden><button class="close" aria-label="关闭">×</button><h2>释文</h2><p id="brushNote" class="note">笔法要点待考，未找到可逐字引用的文献</p><div id="readText" lang="zh-Hant"></div><p class="small">点一个字看注释。虚线圈的是残损待考字，不计入进度。</p></section>
+<section id="sources" hidden><button class="close" aria-label="关闭">×</button><h2>来源</h2><ul id="srcList"></ul><h3>声音</h3><div id="audioSrc"></div></section>
+<section id="original" hidden aria-label="原拓（未经任何修改）"><button class="close" aria-label="关闭">×</button>
+  <h2>原拓（原图，未裁切、未调色、未叠加）</h2><div class="origWrap"><img id="origImg" src="../assets/candidates/jiuchenggong_2.jpg" alt="宋拓《九成宮醴泉銘》册第2开原图"></div>
+  <p class="small">上海博物馆藏“戚叔玉本”（南宋拓）；上海博物馆藏，图源 Wikimedia Commons。仅供非商业用途。拓纸上的画面是我们据此图生成的可视化。</p></section>
+<script src="audio.js"></script><script src="app.js"></script><div id="hint" role="status" aria-live="polite"></div>
+</body></html>
